@@ -106,12 +106,13 @@ public class Lightsaber : MonoBehaviour
                     _audioSource.Play();
                     break;
                 case EState.active:
-                    //_audioSource.clip = humSounds[Random.Range(0, humSounds.Length)];
-                    //_audioSource.Play();
+                    _audioSource.clip = humSounds[0];
+                    _audioSource.Play();
                     break;
                 case EState.deactivating:
                     _audioSource.clip = saberOff;
                     _audioSource.Play();
+                    _audioSource.loop = false;
                     break;
                 case EState.deactive:
                     break;
